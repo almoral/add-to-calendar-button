@@ -1,5 +1,5 @@
 {
-  "name": "add-to-calendar-button",
+  "name": "mdc-add-to-calendar-button",
   "version": "1.8.6",
   "description": "A convenient JavaScript snippet, which lets you create beautiful buttons, where people can add events to their calendars.",
   "main": "npm_dist/cjs/index.js",
@@ -60,7 +60,6 @@
     "grunt-contrib-uglify": "^5.0.1"
   },
   "dependencies": {
-    "add-to-calendar-button": "github:almoral/add-to-calendar-button",
     "grunt-cli": "^1.4.3"
   }
 }
