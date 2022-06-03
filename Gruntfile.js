@@ -1,7 +1,7 @@
 const npmDelimiter = /\/\/ START INIT[\s\S]*?\/\/ END INIT/gm
 
 function process(content, exportPhrase) {
-  return content.replace(npmDelimiter, `${exportPhrase} { atcb_action, atcb_init };`);
+  return content.replace(npmDelimiter, `${exportPhrase} { atcb_action, atcb_init, atcb_generate_ical, atcb_generate_google, atcb_generate_microsoft };`);
 }
 module.exports = function(grunt) {
 

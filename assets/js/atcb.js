@@ -7,7 +7,7 @@ const atcbVersion = '1.8.6';
 /* Creator: Jens Kuerschner (https://jenskuerschner.de)
  * Project: https://github.com/jekuer/add-to-calendar-button
  * License: MIT with “Commons Clause” License Condition v1.0
- * 
+ *
  */
 
 
@@ -72,8 +72,8 @@ function atcb_parse_schema_json(atcbConfig) {
     Object.keys(atcbConfig['event']).forEach(key => {
       // move entries one level up, but skip schema types
       if (key.charAt(0) !== '@') {
-        atcbConfig[key] = atcbConfig['event'][key]; 
-      } 
+        atcbConfig[key] = atcbConfig['event'][key];
+      }
     });
     // drop the event block and return
     delete atcbConfig.event;
@@ -112,7 +112,7 @@ function atcb_decorate_data(atcbConfig) {
   // calculate the real date values in case that there are some special rules included (e.g. adding days dynamically)
   atcbConfig['startDate'] = atcb_date_calculation(atcbConfig['startDate']);
   atcbConfig['endDate'] = atcb_date_calculation(atcbConfig['endDate']);
-  
+
   // if no description or already decorated, return early
   if (!atcbConfig.description || atcbConfig.description_iCal) return atcbConfig;
 
@@ -251,7 +251,7 @@ function atcb_validate(data) {
         newDate['startDate'] = new Date(newDate['startDate'].getTime() + (timeParts[0] * 3600000) + (timeParts[1] * 60000))
       }
       if (time == 'endTime') {
-        newDate['endDate'] = new Date(newDate['endDate'].getTime() + (timeParts[0] * 3600000) + (timeParts[1] * 60000))      
+        newDate['endDate'] = new Date(newDate['endDate'].getTime() + (timeParts[0] * 3600000) + (timeParts[1] * 60000))
       }
     }
     return true;
@@ -425,7 +425,7 @@ function atcb_generate_bg_overlay(data) {
   bgOverlay.addEventListener('focus', () => atcb_close(false));
   if (data['trigger'] !== 'click') {
     bgOverlay.addEventListener('mousemove', () => atcb_close(true));
-  } else {    
+  } else {
     bgOverlay.classList.add('atcb_click');
   }
   return bgOverlay;
@@ -543,7 +543,6 @@ function atcb_generate_google(data) {
   }
   window.open(url, '_blank').focus();
 }
-
 
 
 // FUNCTION TO GENERATE THE YAHOO URL

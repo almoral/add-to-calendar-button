@@ -16,13 +16,16 @@ declare module 'add-to-calendar-button' {
       timeZoneOffset?: string;
       iCalFileName?: string;
       /**
-       * By default, the dropdown list will be opened on hover and closed as 
-       * soon as you mouse over the background overlay. If you want it to 
-       * instead close only when thebackground overlay is clicked, set this 
+       * By default, the dropdown list will be opened on hover and closed as
+       * soon as you mouse over the background overlay. If you want it to
+       * instead close only when thebackground overlay is clicked, set this
        * to `"click"`.
        */
       trigger?: "click";
     },
     placeBelow?: HTMLElement
   ): void;
+  export function atcb_generate_ical(): any;
+  export function atcb_generate_google(): any;
+  export function atcb_generate_microsoft(): any;
 }
